@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Mishka: каталог</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a class="page-header__logo" href="index.html">
+        <img src="" width="" height="" alt="Логотип интернет-магазина Mishka"/>
+      </a>
+      <nav class="main-nav">
+        <a class="main-nav__toggle" href="#"><span class="visually-hidden">Открыть меню</span></a>
+        <div class="main-nav__list site-list">
+          <a class="site-list__item site-list__item--active">Каталог товаров</a>
+          <a class="site-list__item" href="order.html">Вязание на заказ</a>
+        </div>
+        <div class="main-nav__list user-list">
+          <a class="user-list__item" href="#">Поиск по сайту</a>
+          <a class="user-list__item" href="#">Корзина: пока пуста</a>
+        </div>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h2 class="page-main__title">Каталог товаров</h2>
+      <section class="catalog">
+        <article class="product">
+          <a href="#">
+            <img class="product__img" src="" width="" height="" alt="Голубая вязаная игрушка Зайчик"/>
+          </a>
+          <a class="product__link">
+            <h3 class="product__title">Зайчик-попрыгайчик</h3>
+          </a>
+          <p class="product__text">Рост 30 см, вес 200 г</p>
+          <span class="product__price">1 200 руб.</span>
+          <a class="product__btn" href="#"><span class="visually-hidden">Добавить в корзину</span></a>
+        </article>
+        <article class="product">
+          <a href="#">
+            <img class="product__img" src="" width="" height="" alt="Бело-розовая вязаная корзинка"/>
+          </a>
+          <a class="product__link">
+            <h3 class="product__title">Корзинка для белья</h3>
+          </a>
+          <p class="product__text">Диаметр 15 см, высота 10 см</p>
+          <span class="product__price">690 руб.</span>
+          <a class="product__btn" href="#"><span class="visually-hidden">Добавить в корзину</span></a>
+        </article>
+        <article class="product">
+          <a href="#">
+            <img class="product__img" src="" width="" height="" alt="Большая бело-зеленая вязаная корзинка"/>
+          </a>
+          <a class="product__link">
+            <h3 class="product__title">Большая корзинка для игрушек</h3>
+          </a>
+          <p class="product__text">Диаметр 30 см, высота 30 см</p>
+          <span class="product__price">1 500 руб.</span>
+          <a class="product__btn" href="#"><span class="visually-hidden">Добавить в корзину</span></a>
+        </article>
+      </section>
+      <section class="media">
+        <h2 class="media__title">Процесс производства</h2>
+        <video class="media__video" width="" height="" poster="" preload="auto"></video>
+        <p class="media__text">
+          По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+        </p>
+        <a class="btn media__btn">Сделать заказ</a>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <section class="social">
+        <a class="social__item social__item--instagram" href="#"><span class="visually-hidden">Instagram</span></a>
+        <a class="social__item social__item--facebook" href="#"><span class="visually-hidden">Facebook</span></a>
+        <a class="social__item social__item--twitter" href="#"><span class="visually-hidden">Twitter</span></a>
+      </section>
+      <section class="copyright">
+        <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">Логотип HTML Academy</span>
+        </a>
+      </section>
+    </footer>
+    <div class="overlay"></div>
+    <div class="modal">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="modal__goods">
+          <legend class="modal__goods-text">Выберите размер:</legend>
+          <div class="modal__goods-types">
+            <input id="small-size" type="radio" name="size" value="S" checked>
+            <label for="small-size" tabindex="0">S</label>
+            <input id="medium-size" type="radio" name="size" value="M">
+            <label for="medium-size" tabindex="0">M</label>
+            <input id="large-size" type="radio" name="size" value="L">
+            <label for="large-size" tabindex="0">L</label>
+          </div>
+        </fieldset>
+        <button class="btn modal__btn" type="submit">Добавить</button>
+      </form>
+    </div>
+  </body>
+</html>
