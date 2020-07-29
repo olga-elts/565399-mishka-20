@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Mishka: каталог</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
+      <a class="logo" href="index.html">
         <img src="" width="" height="" alt="Логотип интернет-магазина Mishka"/>
       </a>
       <nav class="main-nav">
@@ -15,9 +16,9 @@
           <a class="site-list__item site-list__item--active">Каталог товаров</a>
           <a class="site-list__item" href="order.html">Вязание на заказ</a>
         </div>
-        <div class="main-nav__list user-list">
-          <a class="user-list__item" href="#">Поиск по сайту</a>
-          <a class="user-list__item" href="#">Корзина: пока пуста</a>
+        <div class="main-nav__list site-list">
+          <a class="site-list__item site-list__item--search" href="#">Поиск по сайту</a>
+          <a class="site-list__item site-list__item--basket" href="#">Корзина: пока пуста</a>
         </div>
       </nav>
     </header>
@@ -80,7 +81,6 @@
         </a>
       </section>
     </footer>
-    <div class="overlay"></div>
     <div class="modal">
       <h2 class="modal__title">Добавить в корзину</h2>
       <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
