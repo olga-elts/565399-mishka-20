@@ -8,7 +8,7 @@
   <body>
     <header class="page-header">
       <a class="logo" href="index.html">
-        <img src="" width="" height="" alt="Логотип интернет-магазина Mishka"/>
+        <img class="logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина Mishka"/>
       </a>
       <nav class="main-nav">
         <a class="main-nav__toggle" href="#"><span class="visually-hidden">Открыть меню</span></a>
@@ -27,7 +27,7 @@
       <section class="catalog">
         <article class="product">
           <a href="#">
-            <img class="product__img" src="" width="" height="" alt="Голубая вязаная игрушка Зайчик"/>
+            <img class="product__img" src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Голубая вязаная игрушка Зайчик"/>
           </a>
           <a class="product__link">
             <h3 class="product__title">Зайчик-попрыгайчик</h3>
@@ -38,7 +38,7 @@
         </article>
         <article class="product">
           <a href="#">
-            <img class="product__img" src="" width="" height="" alt="Бело-розовая вязаная корзинка"/>
+            <img class="product__img" src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Бело-розовая вязаная корзинка"/>
           </a>
           <a class="product__link">
             <h3 class="product__title">Корзинка для белья</h3>
@@ -49,7 +49,7 @@
         </article>
         <article class="product">
           <a href="#">
-            <img class="product__img" src="" width="" height="" alt="Большая бело-зеленая вязаная корзинка"/>
+            <img class="product__img" src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Большая бело-зеленая вязаная корзинка с игрушками"/>
           </a>
           <a class="product__link">
             <h3 class="product__title">Большая корзинка для игрушек</h3>
@@ -61,7 +61,7 @@
       </section>
       <section class="media">
         <h2 class="media__title">Процесс производства</h2>
-        <video class="media__video" width="" height="" poster="" preload="auto"></video>
+        <video class="media__video" width="260" height="150" poster="img/video-mobile@1x.jpg" preload="auto"></video>
         <p class="media__text">
           По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
         </p>
@@ -88,14 +88,14 @@
           <legend class="modal__goods-text">Выберите размер:</legend>
           <div class="modal__goods-types">
             <input id="small-size" type="radio" name="size" value="S" checked>
-            <label for="small-size" tabindex="0">S</label>
+            <label class="modal__goods-type" for="small-size" tabindex="0">S</label>
             <input id="medium-size" type="radio" name="size" value="M">
-            <label for="medium-size" tabindex="0">M</label>
+            <label class="modal__goods-type" for="medium-size" tabindex="0">M</label>
             <input id="large-size" type="radio" name="size" value="L">
-            <label for="large-size" tabindex="0">L</label>
+            <label class="modal__goods-type" for="large-size" tabindex="0">L</label>
           </div>
         </fieldset>
-        <button class="btn modal__btn" type="submit">Добавить</button>
+        <button class="btn btn--modal" type="submit">Добавить</button>
       </form>
     </div>
   </body>

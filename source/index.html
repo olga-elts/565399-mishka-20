@@ -7,8 +7,8 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="logo" href="#">
-        <img src="" width="" height="" alt="Логотип интернет-магазина Mishka"/>
+      <a class="logo">
+        <img class="logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина Mishka"/>
       </a>
       <nav class="main-nav">
         <a class="main-nav__toggle" href="#"><span class="visually-hidden">Открыть меню</span></a>
@@ -26,8 +26,8 @@
       <section class="contents">
         <h2 class="contents__title">Милые штуки ручной работы для дома</h2>
         <div class="contents__menu">
-          <a class="contents__item" href="#">Предметы интерьера</a>
-          <a class="contents__item" href="#">Детские игрушки</a>
+          <a class="contents__item contents__item--interior" href="#">Предметы интерьера</a>
+          <a class="contents__item contents__item--toys" href="#">Детские игрушки</a>
         </div>
       </section>
       <aticle class="featured">
@@ -52,7 +52,7 @@
             </tr>
           </tbody>
         </table>
-        <img class="featured__img" src="" width="" height="" alt="Вязаные корзинки размеров S, M и L"/>
+        <img class="featured__img" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки размеров S, M и L"/>
         <span class="featured__price">Цена: 990 руб.</span>
         <a class="btn featured__btn" href="form.html">Заказать</a>
       </section>
@@ -74,8 +74,8 @@
             <blockquote class="comment__text">
               Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
             </blockquote>
-            <cite class="comment__author">Анастасия Красильникова</cite>
-            <a class="comment__login" href="#">@misssssiskras</a>
+            <cite class="comment__author-name">Анастасия Красильникова</cite>
+            <a class="comment__author-login" href="#">@misssssiskras</a>
           </article>
           <article class="comment comments__item">
             <blockquote class="comment__text">
@@ -129,14 +129,14 @@
           <legend class="modal__goods-text">Выберите размер:</legend>
           <div class="modal__goods-types">
             <input id="small-size" type="radio" name="size" value="S" checked>
-            <label for="small-size" tabindex="0">S</label>
+            <label class="modal__goods-type" for="small-size" tabindex="0">S</label>
             <input id="medium-size" type="radio" name="size" value="M">
-            <label for="medium-size" tabindex="0">M</label>
+            <label class="modal__goods-type" for="medium-size" tabindex="0">M</label>
             <input id="large-size" type="radio" name="size" value="L">
-            <label for="large-size" tabindex="0">L</label>
+            <label class="modal__goods-type" for="large-size" tabindex="0">L</label>
           </div>
         </fieldset>
-        <button class="btn modal__btn" type="submit">Добавить</button>
+        <button class="btn btn--modal" type="submit">Добавить</button>
       </form>
     </div>
   </body>
