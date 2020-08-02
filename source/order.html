@@ -3,21 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>Mishka: на заказ</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img src="" width="" height="" alt="Логотип интернет-магазина Mishka"/>
+      <a class="logo" href="index.html">
+        <img class="logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина Mishka"/>
       </a>
       <nav class="main-nav">
         <a class="main-nav__toggle" href="#"><span class="visually-hidden">Открыть меню</span></a>
         <div class="main-nav__list site-list">
           <a class="site-list__item" href="catalog.html">Каталог товаров</a>
-          <a class="site-list__item site-list__item--active" >Вязание на заказ</a>
+          <a class="site-list__item site-list__item--active">Вязание на заказ</a>
         </div>
-        <div class="main-nav__list user-list">
-          <a class="user-list__item" href="#">Поиск по сайту</a>
-          <a class="user-list__item" href="#">Корзина: пока пуста</a>
+        <div class="main-nav__list site-list">
+          <a class="site-list__item site-list__item--search" href="#">Поиск по сайту</a>
+          <a class="site-list__item site-list__item--basket" href="#">Корзина: пока пуста</a>
         </div>
       </nav>
     </header>
@@ -32,36 +33,36 @@
             <legend class="order__features-title">Тип</legend>
             <div class="order__features-list">
               <input id="home-decor" type="radio" name="type" value="home-decor" checked>
-              <label for="home-decor" tabindex="0">Аксессуар для интерьера</label>
+              <label class="order__feature" for="home-decor" tabindex="0">Аксессуар для интерьера</label>
               <input id="toy" type="radio" name="type" value="toy">
-              <label for="toy" tabindex="0">Детская игрушка</label>
+              <label class="order__feature" for="toy" tabindex="0">Детская игрушка</label>
             </div>
           </fieldset>
           <fieldset class="order__info">
             <legend class="order__features-title">Цвет</legend>
             <div class="order__features-list">
               <input id="white" type="checkbox" name="white" checked>
-              <label for="white" tabindex="0">Белый</label>
+              <label class="order__feature" for="white" tabindex="0">Белый</label>
               <input id="gray" type="checkbox" name="gray" checked>
-              <label for="gray" tabindex="0">Серый</label>
+              <label class="order__feature" for="gray" tabindex="0">Серый</label>
               <input id="tiffany" type="checkbox" name="tiffany">
-              <label for="tiffany" tabindex="0">«Тиффани»</label>
+              <label class="order__feature" for="tiffany" tabindex="0">«Тиффани»</label>
               <input id="black" type="checkbox" name="black">
-              <label for="black" tabindex="0">Черный</label>
+              <label class="order__feature" for="black" tabindex="0">Черный</label>
               <input id="pink" type="checkbox" name="pink">
-              <label for="pink" tabindex="0">Розовый</label>
+              <label class="order__feature" for="pink" tabindex="0">Розовый</label>
               <input id="orange" type="checkbox" name="orange">
-              <label for="orange" tabindex="0">Оранжевый</label>
+              <label class="order__feature" for="orange" tabindex="0">Оранжевый</label>
             </div>
           </fieldset>
           <fieldset class="order__info">
             <legend class="order__features-title">ФИО</legend>
             <div class="order__features-list">
-              <label for="name">Имя:</label>
+              <label class="order__feature" for="name">Имя:</label>
               <input id="name" type="text" name="name" placeholder="Введите ваше имя*" required>
-              <label for="surname">Фамилия:</label>
+              <label class="order__feature" for="surname">Фамилия:</label>
               <input id="surname" type="text" name="surname" placeholder="Укажите фамилию*" required>
-              <label for="patronymic">Отчество:</label>
+              <label class="order__feature" for="patronymic">Отчество:</label>
               <input id="patronymic" type="text" name="patronymic" placeholder="Отчество, если желаете">
             </div>
           </fieldset>

@@ -1,0 +1,36 @@
+.contacts {
+  padding: 0 30px;
+}
+
+.contacts__title {
+  font-weight: bold;
+  .font(18px, 30px);
+  color: @black;
+}
+
+.contacts__data-item,
+.contacts__data-value {
+  .font(15px, 30px);
+}
+
+.contacts__email {
+  color: inherit;
+  border-bottom: 1px solid @tiffany-form;
+}
+
+.contacts__email:hover,
+.comment__author-login:focus {
+  color: @tiffany-medium-active;
+  border-bottom: 1px solid @tiffany-medium-active;
+}
+
+.contacts__email:active {
+  border-bottom: none;
+}
+
+.contacts__map {
+  height: 457px;
+  background-image: url("../img/map-mobile@1x.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
