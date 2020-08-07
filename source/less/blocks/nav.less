@@ -1,0 +1,50 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .font(17px, 24px);
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    width: auto;
+  }
+}
+
+.nav__item {
+  display: inline-block;
+  padding: 27px 30px 27px 76px;
+  font-weight: bold;
+  color: @black;
+  box-shadow: 0px 1px 0px @grey-lines, inset 0px 1px 0px @grey-lines;
+  @media (min-width: @tablet-width) {
+    box-shadow: none;
+    padding: 20px 0;
+  }
+}
+
+.nav__item {
+  @media (min-width: @tablet-width) {
+    margin-right: 35px;
+  }
+}
+
+.nav__item--search,
+.nav__item--basket {
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
+  }
+}
+
+.nav__item:nth-child(2n) {
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
+  }
+}
+
+.nav__item:hover,
+.nav__item:focus {
+  opacity: 0.6;
+}
+
+.nav__item:active {
+  opacity: 0.3;
+}

@@ -1,4 +1,24 @@
 .catalog {
   margin-bottom: 30px;
   padding: 0 30px;
+  @media (min-width: @tablet-width) {
+    padding: 0 50px;
+  }
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+.catalog__item {
+  margin-right: 52px;
+}
+
+.catalog__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.catalog__item:nth-child(3n) {
+  margin-right: 0;
 }

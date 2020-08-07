@@ -1,6 +1,14 @@
 .product {
-  margin-top: 30px;
   border: 1px solid #ECECEC;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    min-height: 334px;
+  }
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .product__img {
