@@ -1,11 +1,54 @@
 .comments {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 38px;
   padding: 0 30px;
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 50px;
+    background-image:  url("../img/review@1x.jpg");
+    background-position: left;
+    background-repeat: no-repeat;
+  }
+  @media (min-width: @desktop-width) {
+    padding: 0 50px 0 225px;
+    background-position: 50px;
+  }
 }
 
 .comments__title {
-  padding-top: 27px;
+  margin-bottom: 14px;
   font-weight: bold;
   .font(25px, 30px);
   color: @black;
+  @media (min-width: @tablet-width) {
+    order: -2;
+    .font(43px, 50px);
+  }
+}
+
+.comments__list {
+  margin-bottom: 30px;
+}
+
+.comments__item {
+  display: none;
+}
+
+.comments__item--active {
+  display: flex;
+}
+
+.comments__toggle-list {
+  margin-bottom: 38px;
+
+}
+
+.comments__btn {
+  @media (min-width: @tablet-width) {
+    order: -1;
+    align-self: center;
+  }
 }

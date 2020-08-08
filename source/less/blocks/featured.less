@@ -1,12 +1,33 @@
 .featured {
+  position: relative;
   margin-bottom: 31px;
   padding: 0 30px;
+  @media (min-width: @tablet-width) {
+    padding: 0 50px;
+  }
+}
+
+.featured__title-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    align-items: center;
+  }
+  @media (min-width: @desktop-width) {
+    flex-direction: row-reverse;
+  }
 }
 
 .featured__title {
   font-weight: bold;
   .font(25px, 30px);
   color: @black;
+  @media (min-width: @tablet-width) {
+    margin-right: auto;
+    .font(43px, 50px);
+  }
 }
 
 .featured__note {
@@ -14,17 +35,61 @@
   .font(17px, 20px);
   color: @tiffany-main;
   text-transform: uppercase;
+  @media (min-width: @tablet-width) {
+    width: min-content;
+    text-align: center;
+  }
+}
+
+.featured__info-wrap {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: @tablet-width) {
+    position: relative;
+  }
+  @media (min-width: @desktop-width) {
+    position: static;
+  }
 }
 
 .featured__info {
   .font(15px, 24px);
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
+}
+
+.featured__data {
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
 }
 
 .featured__img {
   display: block;
+  margin: 0 auto;
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 0;
+    right: 0px;
+  }
+  @media (min-width: @desktop-width) {
+    right: 50px;
+  }
 }
 
 .featured__price {
+  margin-bottom: 25px;
+  text-align: center;
   font-weight: bold;
   .font(17px, 24px);
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
+}
+
+.featured__btn {
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
 }
