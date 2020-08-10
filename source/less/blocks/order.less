@@ -1,30 +1,125 @@
 .order {
   margin-bottom: 55px;
-  padding: 0 30px;
 }
 
 .order__text {
   .font(13px, 24px);
+  @media (min-width: @tablet-width) {
+    .font(17px, 30px);
+  }
+  @media (min-width: @desktop-width) {
+    padding: 0 175px;
+  }
 }
 
 .order__info {
-  border: none;
-  margin: 0;
-  padding: 0;
+  &--grey-bg {
+    background-color: @grey-bg;
+  }
+}
+
+.order__info-inner {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 50px 0;
+  }
+  @media (min-width: @desktop-width) {
+    padding-right: 175px;
+  }
 }
 
 .order__features-title {
+  flex-grow: 1;
   font-weight: bold;
   .font(17px, 16px);
   color: @tiffany-main;
+  @media (min-width: @tablet-width) {
+    width: 25%;
+    max-width: 175px;
+  }
+}
+
+.order__features-list {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  @media (min-width: @tablet-width) {
+    width: 75%;
+  }
+  @media (min-width: @desktop-width) {
+    width: 80%;
+  }
+}
+
+.order__features-list--row {
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.order__features-item {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: @tablet-width) {
+      flex-direction: row;
+  }
 }
 
 .order__feature {
   font-weight: bold;
   .font(17px, 18px);
   color: @black;
+  @media (min-width: @tablet-width) {
+    margin-right: 25px;
+    .font(19px, 18px);
+  }
+}
+
+.order__input {
+  width: 100%;
+  flex-grow: 1;
+  @media (min-width: @tablet-width) {
+    width: 75%;
+  }
+  @media (min-width: @desktop-width) {
+    width: 80%;
+  }
+}
+
+.order__textarea {
+  width: 100%;
+  flex-grow: 1;
+  @media (min-width: @tablet-width) {
+    width: 75%;
+  }
+  @media (min-width: @desktop-width) {
+    width: 80%;
+  }
+}
+
+.order__radio-btn,
+.order__checkbox {
+  display: none;
+}
+
+.order__submit-area {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+  @media (min-width: @desktop-width) {
+    padding: 0 175px;
+  }
 }
 
 .order__note {
+  display: block;
   .font(14px, 16px);
+  @media (min-width: @tablet-width) {
+    order: 1;
+    .font(17px, 30px);
+  }
 }

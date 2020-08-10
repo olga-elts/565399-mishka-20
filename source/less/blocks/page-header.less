@@ -1,11 +1,10 @@
-.page-header {
+.page-header__inner {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   .font(15px, 24px);
   @media (min-width: @tablet-width) {
-    padding: 0 50px;
     justify-content: space-between;
   }
 }
@@ -29,7 +28,8 @@
   display: block;
   width: 21px;
   height: 20px;
-  margin: 0 30px;
+  margin-left: -51px;
+  padding: 0 30px;
   background-image: url("../img/icon-menu-open.svg");
   background-position: center;
   background-repeat: no-repeat;

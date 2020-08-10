@@ -1,9 +1,12 @@
 .contents {
+  background-color: @grey-bg;
+  margin-bottom: 31px;
+}
+
+.contents__inner {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 31px;
-  background-color: @grey-bg;
 }
 
 .contents--index {
@@ -17,7 +20,6 @@
 
 .contents__title {
   margin: 0;
-  padding: 0 30px;
   margin-bottom: 47px;
   padding: 73px 30px;
   font-weight: bold;
@@ -27,7 +29,7 @@
   @media (min-width: @tablet-width) {
     .font(43px, 50px);
     margin: 0;
-    padding: 100px 50px 65px 50px;
+    padding: 100px 0 65px 0;
   }
   @media (min-width: @desktop-width) {
     .font(53px, 57px);
@@ -40,7 +42,6 @@
   align-items: center;
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    padding: 0 50px;
   }
 }
 
