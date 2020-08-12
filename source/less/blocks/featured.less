@@ -4,6 +4,9 @@
 
 .featured__inner {
   position: relative;
+  @media (min-width: @desktop-width) {
+    min-height: 732px;
+  }
 }
 
 .featured__title-wrap {
@@ -45,6 +48,8 @@
   flex-direction: column;
   @media (min-width: @tablet-width) {
     position: relative;
+    justify-content: space-between;
+    min-height: 333px;
   }
   @media (min-width: @desktop-width) {
     position: static;
@@ -57,11 +62,17 @@
   @media (min-width: @tablet-width) {
     width: 50%;
   }
+  @media (min-width: @desktop-width) {
+    width: 40%;
+  }
 }
 
 .featured__data {
   @media (min-width: @tablet-width) {
     width: 50%;
+  }
+  @media (min-width: @desktop-width) {
+    width: 40%;
   }
 }
 
@@ -72,9 +83,11 @@
     position: absolute;
     top: 0;
     right: 0px;
+    width: 333px;
+    height: auto;
   }
   @media (min-width: @desktop-width) {
-    right: 50px;
+    width: 525px;
   }
 }
 
@@ -86,10 +99,16 @@
   @media (min-width: @tablet-width) {
     width: 50%;
   }
+  @media (min-width: @desktop-width) {
+    width: 40%;
+  }
 }
 
 .featured__btn {
   @media (min-width: @tablet-width) {
     width: 50%;
+  }
+  @media (min-width: @desktop-width) {
+    width: 40%;
   }
 }

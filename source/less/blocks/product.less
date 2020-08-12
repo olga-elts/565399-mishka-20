@@ -1,5 +1,4 @@
 .product {
-  border: 1px solid #ECECEC;
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
@@ -13,7 +12,19 @@
 
 .product__img {
   display: block;
+  @media (min-width: @tablet-width) {
+    width: 334px;
+    height: auto;
+  }
+  @media (min-width: @desktop-width) {
+    width: 316px;
+  }
 }
+
+.product__info {
+  border: 1px solid #ECECEC;
+}
+
 
 .product__title {
   font-weight: bold;

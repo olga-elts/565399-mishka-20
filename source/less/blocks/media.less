@@ -1,14 +1,15 @@
 .media {
   margin-bottom: 58px;
-  border: 1px solid #ECECEC;
 }
 
 .media__inner {
   position: relative;
   display: flex;
   flex-direction: column;
+  border: 1px solid #ECECEC;
   @media (min-width: @desktop-width) {
     padding-left: 700px;
+    min-height: 455px;
   }
 }
 
@@ -21,11 +22,14 @@
 .media__video {
   @media (min-width: @tablet-width) {
     order: -1;
+    width: 668px;
+    height: auto;
   }
   @media (min-width: @desktop-width) {
     position: absolute;
     top: 0;
     left: 0;
+    width: 682px;
   }
 }
 
