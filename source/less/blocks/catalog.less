@@ -10,18 +10,12 @@
   }
 }
 
-.catalog__item {
+.catalog__item:not(:nth-child(3n)) {
   @media (min-width: @desktop-width) {
     margin-right: 51px;
   }
 }
 
-.catalog__item:not(:last-child) {
+.catalog__item {
   margin-bottom: 30px;
-}
-
-.catalog__item:nth-child(3n) {
-  @media (min-width: @desktop-width) {
-    margin-right: 0;
-  }
 }

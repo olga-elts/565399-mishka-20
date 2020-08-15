@@ -1,5 +1,6 @@
 .comments {
-  margin-bottom: 38px;
+  position: relative;
+  margin-bottom: 89px;
   @media (min-width: @tablet-width) {
     background-image:  url("../img/review@1x.jpg");
     background-position: left;
@@ -14,10 +15,32 @@
   }
 }
 
+.comments::after {
+  position: absolute;
+  bottom: -57px;
+  width: 100%;
+  content: "";
+  height: 6px;
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-size: auto 6px;
+  @media (min-width: @tablet-width) {
+    bottom: -68px;
+    height: 17px;
+    background-size: auto 17px;
+  }
+  @media (min-width: @desktop-width) {
+    bottom: -74px;
+    height: 23px;
+    background-size: auto 23px;
+  }
+}
+
 .comments__inner {
   display: flex;
   flex-direction: column;
   @media (min-width: @tablet-width) {
+    position: relative;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -28,6 +51,7 @@
 }
 
 .comments__title {
+  margin-top: 0;
   margin-bottom: 14px;
   font-weight: bold;
   .font(25px, 30px);
@@ -51,8 +75,45 @@
 }
 
 .comments__toggle-list {
+  border: 1px solid @grey-lines;
+  border-right: none;
+  display: flex;
   margin-bottom: 38px;
+  width: 100%;
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 25%;
+    border: none;
+  }
+  @media (min-width: @desktop-width) {
+    width: 20%;
+  }
+}
 
+.comments__toggle {
+  width: 50%;
+  height: 50px;
+  border-right: 1px solid @grey-lines;
+  background-repeat: no-repeat;
+  background-position: center;
+  &:hover,
+  &:focus {
+    opacity: 0.6,
+  }
+  &:active {
+    opacity: 0.3,
+  }
+  &--prev {
+    background-image: url("../img/icon-left-arrow.svg");
+  }
+  &--next{
+    background-image: url("../img/icon-right-arrow.svg");
+  }
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 }
 
 .comments__btn {

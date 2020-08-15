@@ -1,8 +1,11 @@
+.page-header {
+
+}
+
 .page-header__inner {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
   .font(15px, 24px);
   @media (min-width: @tablet-width) {
     justify-content: space-between;
@@ -10,25 +13,25 @@
 }
 
 .page-header__logo {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding: 22px;
   text-align: center;
   @media (min-width: @tablet-width) {
-    text-align: left;
+    align-self: center;
     padding: 0;
-    width: 48%;
+    margin-left: 0;
   }
   @media (min-width: @desktop-width) {
-    width: 20%;
-    text-align: center;
+    margin-left: auto;
   }
 }
 
 .page-header__burger {
-  display: block;
-  width: 21px;
+  align-self: center;
+  width: 81px;
   height: 20px;
-  margin-left: -51px;
+  margin-left: -81px;
   padding: 0 30px;
   background-image: url("../img/icon-menu-open.svg");
   background-position: center;
@@ -48,6 +51,12 @@
     order: -1;
     width: 40%;
     .font(17px, 24px);
+    .nav__item {
+      width: 40%;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      margin-right: 5%;
+    }
   }
 }
 
@@ -55,6 +64,10 @@
   @media (min-width: @tablet-width) {
     width: 52%;
     justify-content: flex-end;
+    .nav__item {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
   }
   @media (min-width: @desktop-width) {
     width: 40%;
@@ -65,8 +78,12 @@
   display: none;
   @media (min-width: @desktop-width) {
     display: flex;
-    width: 50%;
+    width: 40%;
     .font(15px, 24px);
+    .nav__item {
+      width: 40%;
+      margin-right: 5%;
+    }
   }
 }
 
@@ -77,8 +94,9 @@
     display: block;
     order: 2;
     width: 52%;
+    padding: 20px 0;
   }
   @media (min-width: @desktop-width) {
-    width: 50%;
+    width: 40%;
   }
 }

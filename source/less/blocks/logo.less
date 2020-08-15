@@ -1,5 +1,6 @@
 .logo {
-  display: inline-block;
+  display: block;
+
 }
 
 .logo__img {
@@ -11,6 +12,17 @@
   @media (min-width: @desktop-width) {
     width: 148px;
     height: 73px;
+  }
+}
+
+.logo__svg {
+  &:hover,
+  &:focus {
+    fill: @tiffany-medium-active;
+  }
+  &:active {
+    fill: @tiffany-medium-active;
+    fill-opacity: 0.3;
   }
 }
 

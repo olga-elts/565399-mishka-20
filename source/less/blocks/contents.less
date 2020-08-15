@@ -1,9 +1,30 @@
 .contents {
   background-color: @grey-bg;
   margin-bottom: 31px;
+  position: relative;
+}
+
+.contents::after {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    bottom: -12px;
+    width: 100%;
+    content: "";
+    height: 24px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-size: auto 24px;
+  }
+  @media (min-width: @desktop-width) {
+    bottom: -17px;
+    height: 34px;
+    background-size: auto 34px;
+  }
 }
 
 .contents__inner {
+z-index: 10;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -19,8 +40,8 @@
     background-size: 575px auto;
   }
   @media (min-width: @tablet-width) {
-    min-height: 758px;
     background-image: url("../img/hero-tablet@1x.jpg");
+    background-position: center top;
     @media (min-resolution: 2dppx) {
       background-image: url("../img/hero-tablet@2x.jpg");
       background-size: 1150px auto;
@@ -30,7 +51,12 @@
     background-image: url("../img/hero-desktop@1x.jpg");
     @media (min-resolution: 2dppx) {
       background-image: url("../img/hero-desktop@2x.jpg");
-      background-size: 1250px auto;
+    }
+  }
+  .contents__inner {
+    min-height: 489px;
+    @media (min-width: @tablet-width) {
+      min-height: 746px;
     }
   }
 }
@@ -56,21 +82,53 @@
 .contents__menu {
   display: flex;
   flex-direction: column;
-  align-items: center;
   @media (min-width: @tablet-width) {
     flex-direction: row;
+    align-items: flex-end;
   }
 }
 
 .contents__item {
+  position: relative;
   width: 100%;
-  padding: 24px 30px 31px 30px;
+  padding: 24px 120px 31px 30px;
   font-weight: bold;
   .font(19px, 24px);
   color: @white;
   @media (min-width: @tablet-width) {
+    .font(20px, 30px);
     width: 50%;
+    padding: 25px 120px 33px 35px;
   }
+}
+
+.contents__item:hover,
+.contents__item:focus {
+  @media (min-width: @tablet-width) {
+    padding-bottom: 38px;
+  }
+}
+
+.contents__item svg {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translate(50%, -50%);
+  opacity: 0.5;
+  @media (min-width: @tablet-width) {
+    right: 35px;
+    top: 30px;
+    transform: translate(0);
+  }
+}
+
+.contents__item:hover svg,
+.contents__item:focus svg {
+  opacity: 0.7;
+}
+
+.contents__item:active svg {
+  opacity: 0.3;
 }
 
 .contents__item--interior {
@@ -91,4 +149,8 @@
 .contents__item--toys:focus,
 .contents__item--toys:active {
   background-color: @tiffany-medium-active;
+}
+
+.contents__item-name {
+  width: min-content;
 }
