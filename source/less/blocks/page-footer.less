@@ -5,7 +5,7 @@
 .page-footer__inner {
   @media (min-width: @tablet-width) {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 31px 0;
   }
@@ -14,7 +14,19 @@
 .page-footer__logo {
   display: none;
   @media (min-width: @tablet-width) {
-    width: 30%;
     display: block;
+    margin-right: auto;
+  }
+}
+
+.page-footer__social {
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+  }
+}
+
+.page-footer__copyright {
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
   }
 }

@@ -4,7 +4,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Mishka: каталог</title>
+    <!-- Pixel Glass -->
+<style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    /* По умолчанию показывается мобильный макет */
+    background-image: url( "img/catalog-mobile.png" );
+  }
+  /* Планшет */
+  @media ( min-width: 768px ) {
+    HTML {
+      /* Планшетный макет */
+      background-image: url( "img/catalog-tablet.png" );
+    }
+  }
+  /* Десктоп */
+  @media ( min-width: 1150px ) {
+    HTML {
+      /* Десктопный макет */
+      background-image: url( "img/catalog-desktop.png" );
+    }
+  }
+</style>
+<!-- // Pixel Glass -->
     <link rel="stylesheet" href="css/style.css">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="js/script.js"></script>
   </head>
   <body class="page">
     <header class="page-header">
@@ -47,7 +73,7 @@
       </div>
     </header>
     <main class="page-main">
-      <section class="contents">
+      <section class="contents contents--catalog">
         <div class="container container--header">
           <div class="contents__inner">
             <h2 class="contents__title">Каталог товаров</h2>
@@ -72,7 +98,7 @@
                 <p class="product__text">Рост 30 см, вес 200 г</p>
                 <div class="product__price-wrap">
                   <span class="product__price">1 200 руб.</span>
-                  <a class="product__btn" href="#">
+                  <a class="product__btn js-modal" href="#">
                     <svg width="21" height="19">
                       <use xlink:href="img/sprite.svg#icon-basket"></use>
                     </svg>
@@ -96,7 +122,7 @@
                 <p class="product__text">Диаметр 15 см, высота 10 см</p>
                 <div class="product__price-wrap">
                   <span class="product__price">690 руб.</span>
-                  <a class="product__btn" href="#">
+                  <a class="product__btn js-modal" href="#">
                     <svg width="21" height="19">
                       <use xlink:href="img/sprite.svg#icon-basket"></use>
                     </svg>
@@ -115,12 +141,12 @@
               </a>
               <div class="product__info">
                 <a class="product__link">
-                  <h3 class="product__title">Большая корзинка для игрушек</h3>
+                  <h3 class="product__title">Большая корзинка для&nbsp;игрушек</h3>
                 </a>
                 <p class="product__text">Диаметр 30 см, высота 30 см</p>
                 <div class="product__price-wrap">
                   <span class="product__price">1 500 руб.</span>
-                  <a class="product__btn" href="#">
+                  <a class="product__btn js-modal" href="#">
                     <svg width="21" height="19">
                       <use xlink:href="img/sprite.svg#icon-basket"></use>
                     </svg>
@@ -154,7 +180,7 @@
             <p class="media__text">
               По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
             </p>
-            <a class="btn media__btn">Сделать заказ</a>
+            <a class="btn media__btn js-modal">Сделать заказ</a>
           </div>
         </div>
       </section>
@@ -169,7 +195,7 @@
               </svg>
             </a>
           </div>
-          <section class="social">
+          <section class="social page-footer__social">
             <a class="social__item social__item--instagram" href="#">
               <svg width="22" height="21">
                 <use xlink:href="img/sprite.svg#icon-instagram"></use>
@@ -189,7 +215,7 @@
               <span class="visually-hidden">Twitter</span>
             </a>
           </section>
-          <section class="copyright">
+          <section class="copyright page-footer__copyright">
             <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
             <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
               <svg width="27" height="34">
@@ -202,21 +228,22 @@
       </div>
     </footer>
     <div class="modal">
-      <h2 class="modal__title">Добавить в корзину</h2>
+      <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
       <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="modal__goods">
           <legend class="modal__goods-text">Выберите размер:</legend>
           <div class="modal__goods-types">
-            <input id="small-size" type="radio" name="size" value="S" checked>
+            <input class="modal__radio" id="small-size" type="radio" name="size" value="S" checked>
             <label class="modal__goods-type" for="small-size" tabindex="0">S</label>
-            <input id="medium-size" type="radio" name="size" value="M">
+            <input class="modal__radio" id="medium-size" type="radio" name="size" value="M">
             <label class="modal__goods-type" for="medium-size" tabindex="0">M</label>
-            <input id="large-size" type="radio" name="size" value="L">
+            <input class="modal__radio" id="large-size" type="radio" name="size" value="L">
             <label class="modal__goods-type" for="large-size" tabindex="0">L</label>
           </div>
         </fieldset>
         <button class="btn btn--modal" type="submit">Добавить</button>
       </form>
     </div>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

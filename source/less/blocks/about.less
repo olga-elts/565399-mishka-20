@@ -1,5 +1,8 @@
 .about {
   margin-bottom: 31px;
+  @media (min-width: @desktop-width) {
+    margin-bottom: 36px;
+  }
 }
 
 .about__inner {
@@ -15,8 +18,11 @@
   .font(25px, 30px);
   color: @black;
   @media (min-width: @tablet-width) {
-    margin-bottom: 31px;
+    margin-bottom: 41px;
     .font(43px, 50px);
+  }
+  @media (min-width: @desktop-width) {
+    .font(53px, 57px);
   }
 }
 
@@ -43,23 +49,36 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 54px;
     width: 50%;
+    .font(20px, 22px);
   }
   &--eco {
     background-image: url("../img/icon-feature-flower.svg");
+    @media (min-width: @tablet-width) {
+      order: -2;
+    }
   }
   &--price {
     background-image: url("../img/icon-feature-money.svg");
   }
   &--like {
     background-image: url("../img/icon-feature-heart.svg");
+    @media (min-width: @tablet-width) {
+      order: 1;
+    }
   }
   &--handmade {
     background-image: url("../img/icon-feature-ball.svg");
+    @media (min-width: @tablet-width) {
+      order: -1;
+    }
   }
   &--factory {
     background-image: url("../img/icon-feature-rocket.svg");
   }
   &--present {
     background-image: url("../img/icon-feature-gift.svg");
+    @media (min-width: @tablet-width) {
+      order: 2;
+    }
   }
 }

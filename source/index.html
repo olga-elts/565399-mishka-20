@@ -4,10 +4,35 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Mishka: интернет-магазин</title>
+    <!-- Pixel Glass -->
+<style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    /* По умолчанию показывается мобильный макет */
+    background-image: url( "img/index-mobile.png" );
+  }
+  /* Планшет */
+  @media ( min-width: 768px ) {
+    HTML {
+      /* Планшетный макет */
+      background-image: url( "img/index-tablet.png" );
+    }
+  }
+  /* Десктоп */
+  @media ( min-width: 1150px ) {
+    HTML {
+      /* Десктопный макет */
+      background-image: url( "img/index-desktop.png" );
+    }
+  }
+</style>
+<!-- // Pixel Glass -->
     <link rel="stylesheet" href="css/style.css">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="js/script.js"></script>
   </head>
   <body class="page">
-    <object type="image/svg+xml" data="sprite.svg" ></object>
     <header class="page-header">
       <div class="container container--header">
         <div class="page-header__inner">
@@ -50,7 +75,7 @@
     <main class="page-main">
       <section class="contents contents--index">
         <div class="container container--header">
-          <div class="contents__inner contents__inner--index">
+          <div class="contents__inner">
             <h2 class="contents__title">Милые штуки ручной работы&nbsp;для дома</h2>
             <div class="contents__menu">
               <a class="contents__item contents__item--interior" href="#">
@@ -102,7 +127,7 @@
                 <img class="featured__img" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки размеров S, M и L"/>
               </picture>
               <span class="featured__price">Цена: 990 руб.</span>
-              <a class="btn featured__btn" href="form.html">Заказать</a>
+              <a class="btn featured__btn js-modal" href="form.html">Заказать</a>
             </div>
           </div>
         </div>
@@ -112,12 +137,12 @@
           <div class="about__inner">
             <h2 class="about__title">Коротко о нас:</h2>
             <ul class="about__list">
-              <li class="about__item about__item--eco">Экологически чистые материалы</li>
-              <li class="about__item about__item--price">Скандинавский стиль по российской цене</li>
-              <li class="about__item about__item--like">Увеличивает лайки на фотографиях</li>
-              <li class="about__item about__item--handmade">Связано вручную с любовью и умилением</li>
+              <li class="about__item about__item--eco">Экологически чистые&nbsp;материалы</li>
+              <li class="about__item about__item--price">Скандинавский стиль по&nbsp;российской цене</li>
+              <li class="about__item about__item--like">Увеличивает лайки на&nbsp;фотографиях</li>
+              <li class="about__item about__item--handmade">Связано вручную с любовью&nbsp;и&nbsp;умилением</li>
               <li class="about__item about__item--factory">Поддержка отечественного производителя</li>
-              <li class="about__item about__item--present">Поставляется в подарочной упаковке</li>
+              <li class="about__item about__item--present">Поставляется в подарочной&nbsp;упаковке</li>
             </ul>
           </div>
         </div>
@@ -169,7 +194,7 @@
                 </div>
                 <div class="contacts__data">
                   <div class="contacts__data-item">адрес:</div>
-                  <div class="contacts__data-value">г.&nbsp;Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8, офис&nbsp;101</div>
+                  <div class="contacts__data-value">г.&nbsp;Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8,&nbsp;офис&nbsp;101</div>
                 </div>
               </div>
               <div class="contacts__map">
@@ -191,7 +216,7 @@
               </svg>
             </a>
           </div>
-          <section class="social">
+          <section class="social page-footer__social">
             <a class="social__item social__item--instagram" href="#">
               <svg width="22" height="21">
                 <use xlink:href="img/sprite.svg#icon-instagram"></use>
@@ -211,7 +236,7 @@
               <span class="visually-hidden">Twitter</span>
             </a>
           </section>
-          <section class="copyright">
+          <section class="copyright page-footer__copyright">
             <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
             <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
               <svg width="27" height="34">
@@ -224,21 +249,22 @@
       </div>
     </footer>
     <div class="modal">
-      <h2 class="modal__title">Добавить в корзину</h2>
+      <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
       <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="modal__goods">
           <legend class="modal__goods-text">Выберите размер:</legend>
           <div class="modal__goods-types">
-            <input id="small-size" type="radio" name="size" value="S" checked>
+            <input class="modal__radio" id="small-size" type="radio" name="size" value="S" checked>
             <label class="modal__goods-type" for="small-size" tabindex="0">S</label>
-            <input id="medium-size" type="radio" name="size" value="M">
+            <input class="modal__radio" id="medium-size" type="radio" name="size" value="M">
             <label class="modal__goods-type" for="medium-size" tabindex="0">M</label>
-            <input id="large-size" type="radio" name="size" value="L">
+            <input class="modal__radio" id="large-size" type="radio" name="size" value="L">
             <label class="modal__goods-type" for="large-size" tabindex="0">L</label>
           </div>
         </fieldset>
         <button class="btn btn--modal" type="submit">Добавить</button>
       </form>
     </div>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

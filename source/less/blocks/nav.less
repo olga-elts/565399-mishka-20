@@ -11,6 +11,12 @@
   }
 }
 
+.nav--closed {
+  @media (max-width: @mobile-width) {
+    display: none;
+  }
+}
+
 .nav__item {
   position: relative;
   display: inline-block;
@@ -26,14 +32,11 @@
 }
 
 .nav__item {
-  @media (min-width: @tablet-width) {
-
-  }
   &--search {
     @media (min-width: @tablet-width) {
       text-align: center;
-      min-width: 80px;
-      padding-left: 80px;
+      min-width: 83px;
+      padding-left: 83px;
       margin-right: 0;
       font-size: 0;
       border-left: 1px solid rgba(@black, 0.1);
@@ -41,7 +44,7 @@
   }
   &--basket {
     @media (min-width: @tablet-width) {
-      padding-left: 80px;
+      padding-left: 83px;
       border-left: 1px solid rgba(@black, 0.1);
     }
   }
@@ -61,8 +64,10 @@
 
 .nav__item svg {
   position: absolute;
-  top: center;
-  left: 30px;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  left: 31px;
   opacity: 0.2;
 }
 
