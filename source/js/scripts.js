@@ -24,9 +24,9 @@ var closeModal = function() {
 
 orderBtns.forEach(item => {
   item.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  modal.classList.add("modal--show");
-  page.classList.add("page--overlayed");
+    evt.preventDefault();
+    modal.classList.add("modal--show");
+    page.classList.add("page--overlayed");
   });
 });
 

@@ -1,10 +1,11 @@
 .copyright {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  width: 100%;
   padding: 18px 0 21px 0;
+
   @media (min-width: @tablet-width) {
     width: auto;
     justify-content: flex-end;
@@ -19,29 +20,17 @@
 }
 
 .copyright__logo {
+  &:hover svg,
+  &:focus svg {
+    fill: @tiffany-medium-active;
+  }
 
-}
+  &:active svg {
+    fill: @tiffany-medium-active;
+    fill-opacity: 0.3;
+  }
 
-.copyright__logo:hover svg,
-.copyright__logo:focus svg {
-  fill: @tiffany-medium-active;
-}
-
-.copyright__logo:active svg {
-  fill: @tiffany-medium-active;
-  fill-opacity: 0.3;
-}
-
-.copyright__logo svg {
-  fill: @tiffany-main;
-}
-
-.copyright__logo:hover,
-.copyright__logo:focus svg {
-  fill: @tiffany-medium-active;
-}
-
-.copyright__logo:active svg {
-  fill: @tiffany-medium-active;
-  fill-opacity: 0.3;
+  & svg {
+    fill: @tiffany-main;
+  }
 }

@@ -1,8 +1,10 @@
 .media {
   margin-bottom: 58px;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 64px;
   }
+
   @media (min-width: @desktop-width) {
     margin-bottom: 104px;
   }
@@ -11,12 +13,14 @@
 .media__inner {
   padding: 0 33px;
   border: 1px solid @grey-lines;
+
   @media (min-width: @tablet-width) {
     position: relative;
     display: flex;
     flex-direction: column;
     padding: 0 41px;
   }
+
   @media (min-width: @desktop-width) {
     padding: 0 56px 0 762px;
     min-height: 455px;
@@ -30,10 +34,12 @@
   align-items: center;
   margin-top: 22px;
   margin-bottom: 26px;
+
   @media (min-width: @tablet-width) {
     margin-top: 36px;
     margin-bottom: 20px;
   }
+
   @media (min-width: @desktop-width) {
     flex-direction: column;
     align-items: flex-start;
@@ -43,9 +49,11 @@
 
 .media__title-wrap svg {
   margin-right: 25px;
+
   @media (min-width: @tablet-width) {
     margin-right: 33px;
   }
+
   @media (min-width: @desktop-width) {
     margin-bottom: 27px;
   }
@@ -57,6 +65,7 @@
   font-weight: bold;
   .font(17px, 24px);
   color: @black;
+
   @media (min-width: @tablet-width) {
     width: auto;
     .font(20px, 24px);
@@ -66,11 +75,13 @@
 .media__video {
   position: relative;
   margin: 0 -34px 35px -34px;
+
   @media (min-width: @tablet-width) {
     align-self: center;
     margin: 0 -41px;
     order: -1;
   }
+
   @media (min-width: @desktop-width) {
     margin: 0;
     position: absolute;
@@ -83,27 +94,29 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
-}
+  transform: translate(-50%, -50%);
 
-.media__video svg:hover,
-.media__video svg:focus {
-  width: 121px;
-  height: 92px;
-}
+  &:hover,
+  &:focus {
+    width: 121px;
+    height: 92px;
+  }
 
-.media__video svg:active {
-  width: 81px;
-  height: 62px;
-  fill-opacity: 0.3;
+  &:active {
+    width: 81px;
+    height: 62px;
+    fill-opacity: 0.3;
+  }
 }
 
 .media__img {
   display: block;
+
   @media (min-width: @tablet-width) {
     width: 668px;
     height: auto;
   }
+
   @media (min-width: @desktop-width) {
     width: 682px;
     height: auto;
@@ -114,11 +127,13 @@
   margin-top: 0;
   margin-bottom: 18px;
   .font(13px, 24px);
+
   @media (min-width: @tablet-width) {
     margin-bottom: 41px;
     width: 100%;
     .font(15px, 30px);
   }
+
   @media (min-width: @desktop-width) {
     margin-bottom: 52px;
   }
@@ -126,10 +141,12 @@
 
 .media__btn {
   margin-bottom: 31px;
+
   @media (min-width: @tablet-width) {
     width: 100%;
     margin-bottom: 46px;
   }
+
   @media (min-width: @desktop-width) {
     align-self: flex-start;
   }

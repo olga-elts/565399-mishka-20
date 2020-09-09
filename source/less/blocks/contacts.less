@@ -1,8 +1,10 @@
 .contacts {
   margin-bottom: 39px;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 57px;
   }
+
   @media (min-width: @desktop-width) {
     margin-bottom: 105px;
   }
@@ -10,6 +12,7 @@
 
 .contacts__inner {
   position: relative;
+
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: column;
@@ -21,26 +24,30 @@
 
 .contacts__title-wrap {
   margin-bottom: 28px;
+
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 33px;
   }
+
   @media (min-width: @desktop-width) {
     flex-direction: row-reverse;
-    justify-content: space-around;
+    justify-content: flex-end;
     margin-bottom: 26px;
   }
 }
 
 .contacts__title-wrap svg {
   display: none;
+
   @media (min-width: @tablet-width) {
     display: block;
   }
-  @media (min-width: @desktop-width) {
 
+  @media (min-width: @desktop-width) {
+    margin: 0 63px;
   }
 }
 
@@ -50,9 +57,11 @@
   font-weight: bold;
   .font(18px, 30px);
   color: @black;
+
   @media (min-width: @tablet-width) {
     .font(43px, 50px);
   }
+
   @media (min-width: @desktop-width) {
     .font(53px, 57px);
   }
@@ -61,19 +70,22 @@
 .contacts__data-list-wrap {
   display: flex;
   flex-direction: column;
+
   @media (min-width: @desktop-width) {
-  padding-left: 175px;
-  flex-grow: 1;
+    flex-grow: 1;
+    padding-left: 175px;
   }
 }
 
 .contacts__data-list {
   margin-bottom: 33px;
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
     margin-bottom: 49px;
   }
+
   @media (min-width: @desktop-width) {
     flex-direction: column;
     margin-bottom: auto;
@@ -83,20 +95,23 @@
 .contacts__data {
   display: flex;
   margin-bottom: 28px;
+
   @media (min-width: @tablet-width) {
     width: 50%;
   }
+
   @media (min-width: @desktop-width) {
     width: auto;
   }
-}
 
-.contacts__data:last-child {
-  margin-bottom: 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .contacts__data-item {
   margin-right: 30px;
+
   @media (min-width: @tablet-width) {
     margin-right: 25px;
   }
@@ -106,6 +121,7 @@
 .contacts__data-value {
   display: inline-block;
   .font(15px, 30px);
+
   @media (min-width: @tablet-width) {
     .font(17px, 30px);
   }
@@ -114,16 +130,16 @@
 .contacts__email {
   color: inherit;
   border-bottom: 1px solid @tiffany-form;
-}
 
-.contacts__email:hover,
-.comment__author-login:focus {
-  color: @tiffany-medium-active;
-  border-bottom: 1px solid @tiffany-medium-active;
-}
+  &:active {
+    border-bottom: none;
+  }
 
-.contacts__email:active {
-  border-bottom: none;
+  &:hover,
+  &:focus {
+    color: @tiffany-medium-active;
+    border-bottom: 1px solid @tiffany-medium-active;
+  }
 }
 
 .contacts__map {
@@ -136,43 +152,49 @@
   background-size: 66px 101px, 100%;
   background-position: 138px 145px, center;
   background-repeat: no-repeat;
+
   @media (min-resolution: 2dppx) {
     background-image: url("../img/icon-map-pin.svg"), url("../img/map-mobile@2x.jpg");
     background-size: 66px 101px, 320px auto;
   }
+
   @media (min-width: @tablet-width) {
     margin-bottom: 55px;
     background-image: url("../img/icon-map-pin.svg"), url("../img/map-tablet@1x.jpg");
     background-position: 363px 139px, center;
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/icon-map-pin.svg"), url("../img/map-tablet@2x.jpg");
       background-size: auto, 768px auto;
     }
   }
+
   @media (min-width: @desktop-width) {
-    margin: 0;
     position: absolute;
     top: 0;
     bottom: 0;
-    right: 0px;
+    right: 0;
     width: 527px;
+    margin: 0;
     background-image: url("../img/icon-map-pin.svg"), url("../img/map-desktop@1x.jpg");
     background-position: 239px 146px, center;
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/icon-map-pin.svg"), url("../img/map-desktop@2x.jpg");
       background-size: auto, 527px auto;
     }
   }
-}
 
-.contacts__map iframe {
-  border: none;
+  & iframe {
+    border: none;
+  }
 }
 
 .contacts__btn {
   @media (min-width: @tablet-width) {
     align-self: center;
   }
+
   @media (min-width: @desktop-width) {
     align-self: flex-start;
   }

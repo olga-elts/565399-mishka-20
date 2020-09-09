@@ -9,38 +9,39 @@
   border: 2px solid @grey;
   background-color: @white;
   cursor: pointer;
+
   @media (min-width: @tablet-width) {
     display: inline-block;
     padding: 14px 35px;
   }
-}
 
-.btn:hover,
-.btn:focus {
-  background-color: @grey;
-  color: @white;
-}
+  &:hover,
+  &:focus {
+    background-color: @grey;
+    color: @white;
+  }
 
-.btn:active {
-  background-color: @grey;
-  color: rgba(@white, 30%);
-}
+  &:active {
+    background-color: @grey;
+    color: rgba(@white, 30%);
+  }
 
-.btn--modal {
-  background-color: @tiffany-main;
-  color: @white;
-  border: none;
-  width: 100%;
-  .font(17px, 16px);
-}
+  &--modal {
+    width: 100%;
+    .font(17px, 16px);
+    color: @white;
+    background-color: @tiffany-main;
+    border: none;
 
-.btn--modal:hover,
-.btn--modal:focus {
-  background-color: @tiffany-medium;
-  color: @white;
-}
+    &:hover,
+    &:focus {
+      background-color: @tiffany-medium;
+      color: @white;
+    }
 
-.btn--modal:active {
-  background-color: @tiffany-medium;
-  color: rgba(@white, 70%);
+    &:active {
+      background-color: @tiffany-medium;
+      color: rgba(@white, 70%);
+    }
+  }
 }

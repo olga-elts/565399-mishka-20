@@ -7,30 +7,32 @@
   margin: 0;
   margin-bottom: 33px;
   .font(15px, 30px);
+
   @media (min-width: @tablet-width) {
     margin-bottom: 61px;
     .font(17px, 30px);
   }
+
   @media (min-width: @desktop-width) {
     margin-bottom: 44px;
   }
 }
 
 .comment__author-name {
+  margin-bottom: 5px;
   font-weight: bold;
+  font-style: normal;
   .font(17px, 24px);
   color: @black;
-  font-style: normal;
-  margin-bottom: 5px;
 }
 
 .comment__author-login {
   .font(17px, 24px);
   color: inherit;
-}
 
-.comment__author-login:hover,
-.comment__author-login:focus,
-.comment__author-login:active {
-  color: @tiffany-medium-active;
+  &:hover,
+  &:focus,
+  &:active {
+    color: @tiffany-medium-active;
+  }
 }

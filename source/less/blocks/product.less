@@ -3,37 +3,41 @@
     display: flex;
     flex-direction: row;
   }
+
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: column;
     width: 316px;
   }
-}
 
-.product:hover,
-.product:focus {
-  box-shadow: 0px 6px 10px rgba(@black, 0.1);
-}
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px rgba(@black, 0.1);
+  }
 
-.product:active {
-  box-shadow: 0px 3px 5px rgba(@black, 0.1);
+  &:active {
+    box-shadow: 0 3px 5px rgba(@black, 0.1);
+  }
 }
 
 .product__img {
   display: block;
+
   @media (min-width: @tablet-width) {
     flex-shrink: 0;
     width: 334px;
     height: auto;
   }
+
   @media (min-width: @desktop-width) {
     width: 316px;
   }
 }
 
 .product__info {
-  border: 1px solid #ECECEC;
+  border: 1px solid @grey-lines;
   padding: 27px 27px 25px 27px;
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
@@ -41,6 +45,7 @@
     width: 50%;
     padding: 27px 33px;
   }
+
   @media (min-width: @desktop-width) {
     width: 100%;
     padding: 27px 28px;
@@ -53,27 +58,29 @@
   font-weight: bold;
   .font(17px, 24px);
   color: @black;
+
   @media (min-width: @tablet-width) {
     .font(20px, 24px);
   }
-}
 
-.product__title:hover,
-.product__title:focus {
-  color: rgba(@black, 60%);
-}
+  &:hover,
+  &:focus {
+    color: rgba(@black, 60%);
+  }
 
-.product__title:active {
-  color: rgba(@black, 30%);
+  &:active {
+    color: rgba(@black, 30%);
+  }
 }
 
 .product__text {
-  .font(13px, 30px);
   margin-top: 0;
   margin-bottom: 18px;
+  .font(13px, 30px);
+
   @media (min-width: @tablet-width) {
-    .font(15px, 30px);
     margin-bottom: 12px;
+    .font(15px, 30px);
   }
 }
 
@@ -89,20 +96,20 @@
   font-weight: bold;
   .font(15px, 24px);
   color: @black;
+
   @media (min-width: @tablet-width) {
     .font(17px, 24px);
   }
 }
 
-.product__btn svg {
-  opacity: 0.2;
-  position: relative;
-  z-index: -1;
-}
-
 .product__btn {
   display: inline-block;
 
+  & svg {
+    opacity: 0.2;
+    position: relative;
+    z-index: -1;
+  }
 }
 
 .product__btn:hover svg,
