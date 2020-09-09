@@ -33,9 +33,13 @@
   height: 20px;
   margin-left: -81px;
   padding: 0 30px;
-  background-image: url("../img/icon-menu-close.svg");
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.page-header__burger--close {
+  display: block;
+  background-image: url("../img/icon-menu-close.svg");
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -43,7 +47,12 @@
 }
 
 .page-header__burger--open {
+  display: block;
   background-image: url("../img/icon-menu-open.svg");
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .page-header__main-nav {

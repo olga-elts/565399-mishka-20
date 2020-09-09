@@ -110,6 +110,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+    @media (min-width: @desktop-width) {
+      margin-right: -50px;
+    }
 }
 
 .order__features-item {
@@ -159,7 +163,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 25%;
+    min-width: 30%;
     margin-bottom: 24px;
   }
 
@@ -351,11 +355,6 @@
   &:active {
     border: 2px solid @tiffany-form;
   }
-}
-
-.order__radio-btn,
-.order__checkbox {
-  display: none;
 }
 
 .order__submit-area {
