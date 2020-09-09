@@ -1,25 +1,28 @@
 .modal {
   position: fixed;
-  top: 50%;
   left: 50%;
+  top: 50%;
   z-index: 10;
   display: none;
   flex-direction: column;
   width: 100%;
   padding: 29px 30px 46px 30px;
-  transform: translate(-50%, -50%);
   border-top: 1px solid #c6c6c6;
   border-bottom: 1px solid #c6c6c6;
   background-color: @white;
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+  transform: translate(-50%, -50%);
 
   @media (min-width: @tablet-width) {
     width: 566px;
     padding: 38px 93px 46px 93px;
+    border: 1px solid #c6c6c6;
   }
 
   &--show {
     display: flex;
+    animation-name: appear;
+    animation-duration: 0.5s;
   }
 }
 

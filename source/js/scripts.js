@@ -3,6 +3,7 @@ var userNav = document.querySelector(".page-header__user-nav");
 var navBurger = document.querySelector(".page-header__burger");
 
 var menuToggle = function() {
+  navBurger.style.display = "block";
   navBurger.classList.toggle("page-header__burger--open");
   mainNav.classList.toggle("nav--closed");
   userNav.classList.toggle("nav--closed");

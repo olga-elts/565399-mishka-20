@@ -7,18 +7,19 @@
 }
 
 .catalog__item {
-  margin-bottom: 30px;
+  margin: 0 auto 30px auto;
 
   @media (min-width: @tablet-width) {
+    margin: 0;
     margin-bottom: 54px;
   }
 
   @media (min-width: @desktop-width) {
     margin-right: 51px;
     margin-bottom: 57px;
-  }
 
-  &:nth-child(3n) {
-    margin-right: 0;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
   }
 }
