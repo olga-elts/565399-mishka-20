@@ -1,23 +1,24 @@
 .social {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 24px 0;
+  width: 100%;
+  padding: 26px 0 22px 0;
   border-bottom: 1px solid @grey-lines-footer;
+
   @media (min-width: @tablet-width) {
-    width: 30%;
+    width: auto;
     border-bottom: none;
   }
 }
 
 .social__item {
   margin-right: 40px;
-}
 
-.social__item:last-child {
-  margin-right: 0;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .social__item:hover svg,

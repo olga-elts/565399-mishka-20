@@ -3,11 +3,18 @@
   flex-direction: column;
   width: 100%;
   .font(17px, 24px);
+
   @media (min-width: @tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     width: auto;
+  }
+
+  &--closed {
+    @media (max-width: @mobile-width) {
+      display: none;
+    }
   }
 }
 
@@ -17,41 +24,41 @@
   padding: 28px 30px 27px 76px;
   font-weight: bold;
   color: @black;
-  box-shadow: 0px 1px 0px @grey-lines, inset 0px 1px 0px @grey-lines;
+  box-shadow: 0 1px 0 @grey-lines, inset 0 1px 0 @grey-lines;
+
   @media (min-width: @tablet-width) {
+    padding: 20px 0;
     vertical-align: middle;
     box-shadow: none;
-    padding: 20px 0;
   }
-}
 
-.nav__item {
-  @media (min-width: @tablet-width) {
-
-  }
   &--search {
     @media (min-width: @tablet-width) {
       text-align: center;
-      min-width: 80px;
-      padding-left: 80px;
+      min-width: 83px;
+      padding-left: 83px;
       margin-right: 0;
       font-size: 0;
       border-left: 1px solid rgba(@black, 0.1);
     }
   }
+
   &--basket {
     @media (min-width: @tablet-width) {
-      padding-left: 80px;
+      padding-left: 83px;
       border-left: 1px solid rgba(@black, 0.1);
     }
   }
+
   &:hover,
   &focus {
     opacity: 0.6;
   }
+
   &:active {
     opacity: 0.3;
   }
+
   &:nth-child(2n) {
     @media (min-width: @tablet-width) {
       margin-right: 0;
@@ -61,8 +68,10 @@
 
 .nav__item svg {
   position: absolute;
-  top: center;
-  left: 30px;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  left: 31px;
   opacity: 0.2;
 }
 

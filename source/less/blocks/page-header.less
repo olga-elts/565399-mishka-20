@@ -1,12 +1,9 @@
-.page-header {
-
-}
-
 .page-header__inner {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   .font(15px, 24px);
+
   @media (min-width: @tablet-width) {
     justify-content: space-between;
   }
@@ -17,42 +14,52 @@
   margin-right: auto;
   padding: 22px;
   text-align: center;
+
   @media (min-width: @tablet-width) {
     align-self: center;
     padding: 0;
     margin-left: 0;
   }
+
   @media (min-width: @desktop-width) {
     margin-left: auto;
   }
 }
 
 .page-header__burger {
+  display: none;
   align-self: center;
   width: 81px;
   height: 20px;
   margin-left: -81px;
   padding: 0 30px;
-  background-image: url("../img/icon-menu-open.svg");
+  background-image: url("../img/icon-menu-close.svg");
   background-position: center;
   background-repeat: no-repeat;
+
   @media (min-width: @tablet-width) {
     display: none;
   }
 }
 
+.page-header__burger--open {
+  background-image: url("../img/icon-menu-open.svg");
+}
+
 .page-header__main-nav {
   @media (min-width: @tablet-width) {
     order: 1;
-    width: 48%;
+    width: 46%;
     .font(15px, 24px);
   }
+
   @media (min-width: @desktop-width) {
     order: -1;
     width: 40%;
     .font(17px, 24px);
+
     .nav__item {
-      width: 40%;
+      width: 42%;
       padding-top: 32px;
       padding-bottom: 32px;
       margin-right: 5%;
@@ -62,13 +69,15 @@
 
 .page-header__user-nav {
   @media (min-width: @tablet-width) {
-    width: 52%;
+    width: 54%;
     justify-content: flex-end;
+
     .nav__item {
       padding-top: 32px;
       padding-bottom: 32px;
     }
   }
+
   @media (min-width: @desktop-width) {
     width: 40%;
   }
@@ -76,12 +85,14 @@
 
 .page-header__extra-nav {
   display: none;
+
   @media (min-width: @desktop-width) {
     display: flex;
     width: 40%;
     .font(15px, 24px);
+
     .nav__item {
-      width: 40%;
+      width: 42%;
       margin-right: 5%;
     }
   }
@@ -90,12 +101,14 @@
 .page-header__note {
   display: none;
   text-align: right;
+
   @media (min-width: @tablet-width) {
     display: block;
     order: 2;
-    width: 52%;
+    width: 54%;
     padding: 20px 0;
   }
+
   @media (min-width: @desktop-width) {
     width: 40%;
   }
