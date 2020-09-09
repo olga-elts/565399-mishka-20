@@ -23,6 +23,7 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
@@ -39,7 +40,7 @@ const scripts = () => {
     .pipe(terser())
     .pipe(rename("scripts.min.js"))
     .pipe(gulp.dest("build/js"))
-    .pipe(sync.stream());
+    .pipe(sync.stream())
 };
 
 exports.scripts = scripts;
@@ -51,12 +52,9 @@ const images = () => {
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.mozjpeg({quality: 75, progressive: true}),
-      imagemin.svgo({
-        plugins: [
-          {cleanupIDs: false}
-        ]
-      })
+      imagemin.svgo()
     ]))
+    .pipe(gulp.dest("build/img"))
 };
 
 exports.images = images;
@@ -66,7 +64,7 @@ exports.images = images;
 const createWebp = () => {
   return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("source/img"))
+    .pipe(gulp.dest("build/img"))
 };
 
 exports.webp = createWebp;
@@ -76,15 +74,18 @@ exports.webp = createWebp;
 const html = () => {
   return gulp.src("source/*.html")
     .pipe(htmlMinimizer({collapseWhitespace: true}))
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("build"))
+    .pipe(sync.stream())
 };
+
+// Svg sprite
 
 // Copy
 
 const copy = () => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
+    "source/img/sprite.svg",
     "source/*.ico"
   ], {
     base: "source"
@@ -121,9 +122,9 @@ exports.server = server;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
-  gulp.watch("source/js/*.js").on("change", sync.reload);
+  gulp.watch("source/less/**/*.less", gulp.series(styles));
+  gulp.watch("source/*.html", gulp.series(html));
+  gulp.watch("source/js/*.js", gulp.series(scripts));
 };
 
 // Build
@@ -135,5 +136,5 @@ const build = gulp.series(
 exports.build = build;
 
 exports.default = gulp.series(
-  clean, copy, html, styles, scripts, server, watcher
+  clean, images, createWebp, copy, html, styles, scripts, server, watcher
 );

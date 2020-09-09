@@ -4,32 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Mishka: на заказ</title>
-    <!-- Pixel Glass -->
-<style>
-  HTML {
-    background-repeat: no-repeat;
-    background-position:  50% 0;
-    /* По умолчанию показывается мобильный макет */
-    background-image: url( "img/order-mobile.png" );
-  }
-  /* Планшет */
-  @media ( min-width: 768px ) {
-    HTML {
-      /* Планшетный макет */
-      background-image: url( "img/order-tablet.png" );
-    }
-  }
-  /* Десктоп */
-  @media ( min-width: 1150px ) {
-    HTML {
-      /* Десктопный макет */
-      background-image: url( "img/order-desktop.png" );
-    }
-  }
-</style>
-<!-- // Pixel Glass -->
     <link href="css/styles.min.css" rel="stylesheet">
-    <link href="css/style-pixelglass.css" rel="stylesheet">
     <link rel="preload" href="fonts/opensans.woff2" as="font">
     <link rel="preload" href="fonts/opensansbold.woff2" as="font">
   </head>
@@ -93,10 +68,10 @@
               <div class="order__info-inner">
                 <h3 class="order__features-title">Тип</h3>
                 <div class="order__features-list">
-                  <input class="order__radio-btn" id="home-decor" type="radio" name="type" value="home-decor" checked>
-                  <label class="order__feature order__feature--type" for="home-decor" tabindex="0">Аксессуар для интерьера</label>
-                  <input class="order__radio-btn" id="toy" type="radio" name="type" value="toy">
-                  <label class="order__feature order__feature--type" for="toy" tabindex="0">Детская игрушка</label>
+                  <input class="order__radio-btn visually-hidden" id="home-decor" type="radio" name="type" value="home-decor" checked>
+                  <label class="order__feature order__feature--type" for="home-decor">Аксессуар для интерьера</label>
+                  <input class="order__radio-btn visually-hidden" id="toy" type="radio" name="type" value="toy">
+                  <label class="order__feature order__feature--type" for="toy">Детская игрушка</label>
                 </div>
               </div>
             </div>
@@ -106,18 +81,18 @@
               <div class="order__info-inner">
                 <h3 class="order__features-title">Цвет</h3>
                 <div class="order__features-list order__features-list--row">
-                  <input class="order__checkbox" id="white" type="checkbox" name="white" checked>
-                  <label class="order__feature order__feature--color" for="white" tabindex="0">Белый</label>
-                  <input class="order__checkbox" id="gray" type="checkbox" name="gray" checked>
-                  <label class="order__feature order__feature--color" for="gray" tabindex="0">Серый</label>
-                  <input class="order__checkbox" id="tiffany" type="checkbox" name="tiffany">
-                  <label class="order__feature order__feature--color" for="tiffany" tabindex="0">«Тиффани»</label>
-                  <input class="order__checkbox" id="black" type="checkbox" name="black">
-                  <label class="order__feature order__feature--color" for="black" tabindex="0">Черный</label>
-                  <input class="order__checkbox" id="pink" type="checkbox" name="pink">
-                  <label class="order__feature order__feature--color" for="pink" tabindex="0">Розовый</label>
-                  <input class="order__checkbox" id="orange" type="checkbox" name="orange">
-                  <label class="order__feature order__feature--color" for="orange" tabindex="0">Оранжевый</label>
+                  <input class="order__checkbox visually-hidden" id="white" type="checkbox" name="white" checked>
+                  <label class="order__feature order__feature--color" for="white">Белый</label>
+                  <input class="order__checkbox visually-hidden" id="gray" type="checkbox" name="gray" checked>
+                  <label class="order__feature order__feature--color" for="gray">Серый</label>
+                  <input class="order__checkbox visually-hidden" id="tiffany" type="checkbox" name="tiffany">
+                  <label class="order__feature order__feature--color" for="tiffany">«Тиффани»</label>
+                  <input class="order__checkbox visually-hidden" id="black" type="checkbox" name="black">
+                  <label class="order__feature order__feature--color" for="black">Черный</label>
+                  <input class="order__checkbox visually-hidden" id="pink" type="checkbox" name="pink">
+                  <label class="order__feature order__feature--color" for="pink">Розовый</label>
+                  <input class="order__checkbox visually-hidden" id="orange" type="checkbox" name="orange">
+                  <label class="order__feature order__feature--color" for="orange">Оранжевый</label>
                 </div>
               </div>
             </div>
@@ -222,7 +197,6 @@
         </div>
       </div>
     </footer>
-    <script src="js/script-pixelglass.js"></script>
     <script src="js/scripts.min.js"></script>
   </body>
 </html>
