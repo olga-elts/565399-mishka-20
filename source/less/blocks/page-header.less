@@ -68,10 +68,14 @@
     .font(17px, 24px);
 
     .nav__item {
-      width: 42%;
+      width: 45%;
       padding-top: 32px;
       padding-bottom: 32px;
-      margin-right: 5%;
+      margin-right: 7.5%;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
     }
   }
 }
@@ -97,12 +101,16 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
-    width: 40%;
+    width: 60%;
     .font(15px, 24px);
 
     .nav__item {
-      width: 42%;
+      width: 30%;
       margin-right: 5%;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
     }
   }
 }
